@@ -1,0 +1,14 @@
+{
+  "name": "exp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node index.js",
+    "start":"node index.js",
+    "dev":"nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

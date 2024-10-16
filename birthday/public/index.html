@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="css/style.css">
+   <style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Container for Content */
+.container {
+    text-align: center;
+    color: white;
+    animation: fadeIn 3s ease-in-out;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px #ff4081;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff4081;
+    transform: scale(1.1);
+}
+
+/* Confetti Effect */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://thumbs.gfycat.com/PlayfulBriskKodiakbear-size_restricted.gif') center no-repeat;
+    background-size: cover;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Balloons Section */
+.balloons {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.balloon {
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: floatUp 6s infinite ease-in-out;
+    opacity: 0.9;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+/* Random Positioning for Balloons */
+.balloon:nth-child(1) { left: 15%; animation-delay: 1s; }
+.balloon:nth-child(2) { left: 35%; animation-delay: 2.5s; }
+.balloon:nth-child(3) { left: 55%; animation-delay: 1.7s; }
+.balloon:nth-child(4) { left: 75%; animation-delay: 3.2s; }
+
+/* Balloons Floating Animation */
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-300px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(-10deg); }
+}
+
+/* Smooth Page Fade-In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting">🎉 Happy Birthday! 🎂</h1>
+        <p id="message">Wishing you all the happiness and joy on your special day!</p>
+        <button onclick="playMusic()">🎵 Play Birthday Song</button>
+
+        <div class="balloons">
+            <div class="balloon" style="background-color: #ff6f61;"></div>
+            <div class="balloon" style="background-color: #ffde59;"></div>
+            <div class="balloon" style="background-color: #6ec6ff;"></div>
+            <div class="balloon" style="background-color: #a5d6a7;"></div>
+        </div>
+    </div>
+    <audio id="birthdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+   <script src="js/script.js"></script>
+</body>
+</html>

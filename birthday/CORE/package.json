@@ -1,0 +1,13 @@
+{
+  "name": "dotfm",
+  "version": "1.0.0",
+  "description": "i dont know",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "node ./",
+    "start": "node server.js"
+  },
+  "author": "vikat",
+  "license": "ISC"
+}
